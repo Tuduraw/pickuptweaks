@@ -1,0 +1,14 @@
+{
+  "key.categories.pickuptweaks.main": "ピックアップ調整",
+  "key.category.pickuptweaks.main": "ピックアップ調整",
+  "key.pickuptweaks.toggle": "ピックアップモードの切り替え（スニーク中: 破棄モード）",
+
+  "message.pickuptweaks.mode.pickup": "ピックアップモード: 通常",
+  "message.pickuptweaks.mode.disabled": "ピックアップモード: 無効",
+  "message.pickuptweaks.mode.discard": "ピックアップモード: 自動破棄",
+  "message.pickuptweaks.server_missing": "サーバーにPickup Tweaksが導入されていません",
+
+  "command.pickuptweaks.reloaded": "設定を再読み込みしました。",
+  "command.pickuptweaks.range.query": "現在のピックアップ範囲: %s ブロック",
+  "command.pickuptweaks.range.set": "ピックアップ範囲を %s ブロックに設定しました。"
+}

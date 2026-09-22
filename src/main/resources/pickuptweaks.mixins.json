@@ -1,0 +1,12 @@
+{
+	"required": true,
+	"package": "com.example.pickuptweaks.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"mixins": [
+		"ItemEntityAccessor",
+		"ItemEntityMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

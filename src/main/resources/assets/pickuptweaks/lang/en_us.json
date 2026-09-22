@@ -1,0 +1,14 @@
+{
+  "key.categories.pickuptweaks.main": "Pickup Tweaks",
+  "key.category.pickuptweaks.main": "Pickup Tweaks",
+  "key.pickuptweaks.toggle": "Toggle pickup mode (sneak: discard mode)",
+
+  "message.pickuptweaks.mode.pickup": "Pickup mode: Normal",
+  "message.pickuptweaks.mode.disabled": "Pickup mode: Disabled",
+  "message.pickuptweaks.mode.discard": "Pickup mode: Auto-discard",
+  "message.pickuptweaks.server_missing": "Pickup Tweaks is not installed on the server",
+
+  "command.pickuptweaks.reloaded": "Reloaded the Pickup Tweaks config.",
+  "command.pickuptweaks.range.query": "Current pickup range: %s blocks",
+  "command.pickuptweaks.range.set": "Pickup range set to %s blocks."
+}

@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "pickuptweaks",
+	"version": "${version}",
+	"name": "Pickup Tweaks",
+	"description": "自動ピックアップを3モード（通常/無効/自動破棄）でキー切り替えでき、拾得範囲をコンフィグで指定できるようにします。モードはプレイヤーのセーブデータに永続化されます。",
+	"authors": [
+		"Your Name"
+	],
+	"contact": {},
+	"license": "MIT",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.example.pickuptweaks.PickupTweaks"
+		],
+		"client": [
+			"com.example.pickuptweaks.client.PickupTweaksClient"
+		]
+	},
+	"mixins": [
+		"pickuptweaks.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.0",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
