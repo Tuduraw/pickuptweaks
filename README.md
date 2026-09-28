@@ -138,34 +138,6 @@ src/client/java/com/example/pickuptweaks/client/
 **クライアントとサーバーの両方に導入が必要です。** 拾得判定はサーバー側にしか存在しないため、
 クライアント単独では動作しません。
 
-## 1.21.11 で対応した変更
-
-- `ResourceLocation` → `Identifier`（`net.minecraft.resources.Identifier`）。
-  ファクトリメソッド名は変わらず `fromNamespaceAndPath` のままです
-  （namespace の省略形は `withDefaultNamespace` など、こちらは従来通り）。
-- `KeyMapping.Category` のファクトリメソッドは `create` ではなく **`register`** です
-  （`KeyMapping.Category.register(Identifier.fromNamespaceAndPath(...))`）。
-  `KeyBindingHelper.registerKeyBinding` 自体は 1.21.11 時点でまだ改名されていません
-  （将来の 26.1 系で `KeyMappingHelper.registerKeyMapping` にリネームされる予定です）。
-- 権限レベルの整数指定が廃止され、`PermissionCheck` ベースの新APIに置き換わりました。
-  `source.hasPermission(2)` は `Commands.hasPermission(Commands.LEVEL_GAMEMASTERS)` に相当します。
-
-## 動作確認していない点
-
-`compileJava` / `compileClientJava` ともにコンパイルは通る想定ですが、
-実際に起動して検証したものではありません。特に以下は Mixin または実行時APIが
-実際に解決されるかどうかに関わるため、コンパイルが通っても起動時に落ちる可能性があります。
-
-1. **`@Accessor("pickupDelay")`** — フィールド名が変わっている場合は
-   バニラの `ItemEntity` を `genSources` で展開して確認してください。
-   `hasPickUpDelay()` が public なら Accessor を使わずそちらでも代用できます。
-2. **`ItemEntity#playerTouch`** — メソッド名自体が変わっている可能性があります。
-   Mixin の `@Inject(method = "playerTouch", ...)` が起動時に解決できない場合、
-   `genSources` で実際のメソッド名を確認してください。
-3. **Data Attachment API**（`net.fabricmc.fabric.api.attachment.v1`）— fabric-api
-   0.141.6+1.21.11 に同梱されている想定ですが、実際にプレイヤーのNBTへ書き込まれ、
-   ワールド再読み込み後も読み出せるかは未検証です。
-
 ## ライセンス
 
 MIT
